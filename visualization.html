@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化 - AI知识库</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/visualization.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>AI知识库</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="articles.html"><i class="fas fa-book"></i> 文章</a></li>
+                <li><a href="tools.html"><i class="fas fa-tools"></i> 工具</a></li>
+                <li><a href="visualization.html" class="active"><i class="fas fa-chart-line"></i> 数据</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> 联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="visualization-page">
+        <div class="container">
+            <!-- 页面标题 -->
+            <header class="page-header">
+                <h1>AI行业数据分析</h1>
+                <p>最后更新时间：<span id="updateTime"></span></p>
+            </header>
+
+            <!-- 图表网格 -->
+            <div class="charts-grid">
+                <!-- 发展趋势图表 -->
+                <div class="chart-container">
+                    <div id="trendChart" class="chart"></div>
+                </div>
+
+                <!-- AI应用分布图表 -->
+                <div class="chart-container">
+                    <div id="applicationChart" class="chart"></div>
+                </div>
+
+                <!-- 投资热度图表 -->
+                <div class="chart-container">
+                    <div id="investmentChart" class="chart"></div>
+                </div>
+
+                <!-- 技术成熟度图表 -->
+                <div class="chart-container">
+                    <div id="maturityChart" class="chart"></div>
+                </div>
+            </div>
+
+            <!-- 数据说明 -->
+            <section class="data-description">
+                <h2>数据说明</h2>
+                <p>本页面数据来源于公开研究报告和行业调查，每月更新一次。</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我</a></li>
+                        <li><a href="tools.html">AI工具</a></li>
+                        <li><a href="contact.html">联系我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fab fa-weixin"></i> WeChat: ai_knowledge</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI知识库 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/visualization.js"></script>
+</body>
+</html> 

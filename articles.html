@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章列表 - AI知识库</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/articles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>AI知识库</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="articles.html" class="active"><i class="fas fa-book"></i> 文章</a></li>
+                <li><a href="tools.html"><i class="fas fa-tools"></i> 工具</a></li>
+                <li><a href="visualization.html"><i class="fas fa-chart-line"></i> 数据</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> 联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="articles-page">
+        <div class="container">
+            <!-- 页面标题 -->
+            <header class="page-header">
+                <h1>AI技术文章</h1>
+                <p>探索AI的前沿技术和应用</p>
+            </header>
+
+            <!-- 文章筛选和搜索 -->
+            <section class="articles-filter">
+                <div class="filter-options">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">所有分类</option>
+                        <option value="AI教程">AI教程</option>
+                        <option value="技术分析">技术分析</option>
+                        <option value="行业动态">行业动态</option>
+                        <option value="实践案例">实践案例</option>
+                    </select>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="latest">最新发布</option>
+                        <option value="popular">最多阅读</option>
+                        <option value="recommended">推荐文章</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索文章...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </section>
+
+            <!-- 文章标签 -->
+            <section class="article-tags">
+                <span class="tag active">全部</span>
+                <span class="tag">ChatGPT</span>
+                <span class="tag">机器学习</span>
+                <span class="tag">深度学习</span>
+                <span class="tag">计算机视觉</span>
+                <span class="tag">自然语言处理</span>
+            </section>
+
+            <!-- 文章列表 -->
+            <section class="articles-grid" id="articlesGrid">
+                <!-- 文章卡片示例 -->
+                <article class="article-card" 
+                    data-tags="ChatGPT,AI教程" 
+                    data-date="2024-03-20" 
+                    data-views="1234" 
+                    data-recommended="1">
+                    <div class="article-image">
+                        <img src="../images/article-1.jpg" alt="文章配图">
+                        <span class="category">AI教程</span>
+                    </div>
+                    <div class="article-content">
+                        <h2>ChatGPT使用指南：从入门到精通</h2>
+                        <p class="article-excerpt">
+                            本文详细介绍了ChatGPT的使用方法和技巧，帮助你更好地利用AI助手提升工作效率...
+                        </p>
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> 2024-03-20</span>
+                            <span><i class="fas fa-eye"></i> 1234</span>
+                            <span><i class="fas fa-comments"></i> 56</span>
+                        </div>
+                        <a href="article-detail.html?id=1" class="read-more">
+                            阅读全文 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 更多文章卡片 -->
+                <!-- 可以通过JavaScript动态生成 -->
+            </section>
+
+            <!-- 分页 -->
+            <section class="pagination">
+                <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">10</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我</a></li>
+                        <li><a href="tools.html">AI工具</a></li>
+                        <li><a href="contact.html">联系我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fab fa-weixin"></i> WeChat: ai_knowledge</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI知识库 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/articleData.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/articles.js"></script>
+</body>
+</html> 

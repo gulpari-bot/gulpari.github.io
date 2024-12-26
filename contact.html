@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - AI知识库</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>AI知识库</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="articles.html"><i class="fas fa-book"></i> 文章</a></li>
+                <li><a href="tools.html"><i class="fas fa-tools"></i> 工具</a></li>
+                <li><a href="visualization.html"><i class="fas fa-chart-line"></i> 数据</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> 联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="contact-page">
+        <div class="container">
+            <!-- 页面标题 -->
+            <header class="page-header">
+                <h1>联系我们</h1>
+                <p>有任何问题或建议，欢迎随时联系</p>
+            </header>
+
+            <!-- 联系信息和表单区域 -->
+            <div class="contact-container">
+                <!-- 联系信息 -->
+                <section class="contact-info">
+                    <h2>联系方式</h2>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="item-content">
+                                <h3>电子邮件</h3>
+                                <p>contact@example.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-weixin"></i>
+                            <div class="item-content">
+                                <h3>微信</h3>
+                                <p>ai_knowledge</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="item-content">
+                                <h3>地址</h3>
+                                <p>陕西西安西北大学</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="item-content">
+                                <h3>工作时间</h3>
+                                <p>周一至周五 9:00-18:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 社交媒体链接 -->
+                    <div class="social-links">
+                        <h2>关注我们</h2>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-weibo"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-zhihu"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-bilibili"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 联系表单 -->
+                <section class="contact-form">
+                    <h2>发送消息</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">主题</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">消息内容</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            发送消息 <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- 地图区域 -->
+            <section class="map-section">
+                <h2>我们的位置</h2>
+                <div class="map-container">
+                    <!-- 这里可以嵌入地图，例如百度地图或高德地图 -->
+                    <div id="map" class="map"></div>
+                </div>
+            </section>
+
+            <!-- FAQ部分 -->
+            <section class="faq-section">
+                <h2>常见问题</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            如何订阅网站更新？
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            您可以通过关注我们的社交媒体账号或订阅邮件列表来获取最新更新。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            如何投稿文章？
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            请将您的文章发送至我们的邮箱，我们会在3个工作日内回复您。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            网站内容是否可以转载？
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            网站内容遵循CC协议，转载请注明出处。
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <!-- 页脚内容与其他页面相��� -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html> 

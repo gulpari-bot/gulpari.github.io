@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具导航 - AI知识库</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>AI知识库</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="articles.html"><i class="fas fa-book"></i> 文章</a></li>
+                <li><a href="tools.html" class="active"><i class="fas fa-tools"></i> 工具</a></li>
+                <li><a href="visualization.html"><i class="fas fa-chart-line"></i> 数据</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> 联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="tools-page">
+        <div class="container">
+            <!-- 页面标题 -->
+            <header class="page-header">
+                <h1>AI工具导航</h1>
+                <p>精选优质AI工具，提升工作效率</p>
+            </header>
+
+            <!-- 工具搜索和筛选 -->
+            <section class="tools-filter">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索AI工具...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-tags">
+                    <span class="tag active" data-category="all">全部</span>
+                    <span class="tag" data-category="text">文本处理</span>
+                    <span class="tag" data-category="image">图像生成</span>
+                    <span class="tag" data-category="audio">音频处理</span>
+                    <span class="tag" data-category="video">视频制作</span>
+                    <span class="tag" data-category="code">代码开发</span>
+                </div>
+            </section>
+
+            <!-- 工具分类展示 -->
+            <section class="tools-section">
+                <h2><i class="fas fa-star"></i> 推荐工具</h2>
+                <div class="tools-grid">
+                    <!-- ChatGPT -->
+                    <div class="tool-card featured">
+                        <div class="tool-header">
+                            <img src="../images/chatgpt-logo.png" alt="ChatGPT">
+                            <span class="tool-badge hot">热门</span>
+                        </div>
+                        <div class="tool-body">
+                            <h3>ChatGPT</h3>
+                            <p>OpenAI开发的大型语言模型，支持自然语言对话和内容创作</p>
+                            <div class="tool-tags">
+                                <span>AI对话</span>
+                                <span>文本生成</span>
+                            </div>
+                            <div class="tool-meta">
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                                <span><i class="fas fa-user"></i> 1000万+</span>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://chat.openai.com" target="_blank" class="btn-primary">访问官网</a>
+                            <a href="#" class="btn-secondary">查看教程</a>
+                        </div>
+                    </div>
+
+                    <!-- Midjourney -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <img src="../images/midjourney-logo.png" alt="Midjourney">
+                            <span class="tool-badge new">新品</span>
+                        </div>
+                        <div class="tool-body">
+                            <h3>Midjourney</h3>
+                            <p>强大的AI绘画工具，支持文本生成图像</p>
+                            <div class="tool-tags">
+                                <span>AI绘画</span>
+                                <span>图像生成</span>
+                            </div>
+                            <div class="tool-meta">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="fas fa-user"></i> 500万+</span>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://www.midjourney.com" target="_blank" class="btn-primary">访问官网</a>
+                            <a href="#" class="btn-secondary">查看教程</a>
+                        </div>
+                    </div>
+
+                    <!-- 更多工具卡片 -->
+                </div>
+            </section>
+
+            <!-- 更多工具分类 -->
+            <section class="tools-section">
+                <h2><i class="fas fa-text-height"></i> 文本处理</h2>
+                <div class="tools-grid">
+                    <!-- 文本处理工具卡片 -->
+                </div>
+            </section>
+
+            <section class="tools-section">
+                <h2><i class="fas fa-image"></i> 图像生成</h2>
+                <div class="tools-grid">
+                    <!-- 图像生成工具卡片 -->
+                </div>
+            </section>
+
+            <!-- 工具提交 -->
+            <section class="submit-tool">
+                <div class="submit-content">
+                    <h2>提交工具</h2>
+                    <p>发现了优质的AI工具？欢迎提交给我们！</p>
+                    <button class="btn-primary" id="submitToolBtn">
+                        <i class="fas fa-plus"></i> 提交工具
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <!-- 页脚内容与其他页面相同 -->
+    </footer>
+
+    <script src="../js/toolsData.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/tools.js"></script>
+</body>
+</html> 

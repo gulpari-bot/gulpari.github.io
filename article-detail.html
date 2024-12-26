@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT使用指南 - AI知识库</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/article.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>AI知识库</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="articles.html" class="active"><i class="fas fa-book"></i> 文章</a></li>
+                <li><a href="tools.html"><i class="fas fa-tools"></i> 工具</a></li>
+                <li><a href="visualization.html"><i class="fas fa-chart-line"></i> 数据</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> 联系</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="article-detail">
+        <div class="container">
+            <!-- 文章头部 -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="category"><i class="fas fa-folder"></i> AI教程</span>
+                    <span class="date"><i class="fas fa-calendar"></i> 2024-03-20</span>
+                    <span class="read-time"><i class="fas fa-clock"></i> 10分钟阅读</span>
+                    <span class="views"><i class="fas fa-eye"></i> 1234次阅读</span>
+                </div>
+                <h1>ChatGPT使用指南：从入门到精通</h1>
+                <div class="author">
+                    <img src="../images/avatar.jpg" alt="作者头像">
+                    <div class="author-info">
+                        <span class="name">作者：AI知识库</span>
+                        <span class="bio">AI技术研究者 | 技术写作者</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 文章目录 -->
+            <aside class="table-of-contents">
+                <h3>目录</h3>
+                <ul>
+                    <li><a href="#intro">1. 简介</a></li>
+                    <li><a href="#basics">2. 基础使用</a>
+                        <ul>
+                            <li><a href="#registration">2.1 注册账号</a></li>
+                            <li><a href="#interface">2.2 界面介绍</a></li>
+                            <li><a href="#first-chat">2.3 第一次对话</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#advanced">3. 高级技巧</a>
+                        <ul>
+                            <li><a href="#prompt">3.1 提示词工程</a></li>
+                            <li><a href="#context">3.2 上下文管理</a></li>
+                            <li><a href="#plugins">3.3 插件使用</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#examples">4. 实践案例</a></li>
+                    <li><a href="#summary">5. 总结与展望</a></li>
+                </ul>
+            </aside>
+
+            <!-- 文章内容 -->
+            <article class="article-content">
+                <section id="intro">
+                    <h2>1. 简介</h2>
+                    <p>ChatGPT是由OpenAI开发的大型语言模型，它能够理解和生成人类语言，为用户提供智能对话服务。本文将全面介绍ChatGPT的使用方法，从基础操作到高级技巧，帮助你充分发挥这个AI助手的潜力。</p>
+                    <img src="../images/chatgpt-intro.jpg" alt="ChatGPT界面" class="article-image">
+                </section>
+
+                <section id="basics">
+                    <h2>2. 基础使用</h2>
+                    
+                    <section id="registration">
+                        <h3>2.1 注册账号</h3>
+                        <p>访问OpenAI官网（chat.openai.com）进行注册。注册过程需要：</p>
+                        <ul>
+                            <li>有效的电子邮箱</li>
+                            <li>支持的地区IP地址</li>
+                            <li>手机号码验证</li>
+                        </ul>
+                        <div class="tip-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>提示：部分地区可能需要使用代理服务访问。</p>
+                        </div>
+                    </section>
+
+                    <section id="interface">
+                        <h3>2.2 界面介绍</h3>
+                        <p>ChatGPT的界面设计简洁直观，主要包括：</p>
+                        <ul>
+                            <li>对话输入框</li>
+                            <li>历史记录侧边栏</li>
+                            <li>模型选择下拉菜单</li>
+                        </ul>
+                        <img src="../images/chatgpt-interface.jpg" alt="ChatGPT界面详解" class="article-image">
+                    </section>
+
+                    <section id="first-chat">
+                        <h3>2.3 第一次对话</h3>
+                        <p>开始第一次对话时，建议：</p>
+                        <ol>
+                            <li>使用清晰的语言表达需求</li>
+                            <li>一次提供完整的上下文</li>
+                            <li>适当使用标点符号</li>
+                        </ol>
+                    </section>
+                </section>
+
+                <section id="advanced">
+                    <h2>3. 高级技巧</h2>
+                    
+                    <section id="prompt">
+                        <h3>3.1 提示词工程</h3>
+                        <p>掌握提示词工程（Prompt Engineering）是提高ChatGPT输出质量的关键：</p>
+                        <ul>
+                            <li>使用明确的指令词</li>
+                            <li>提供详细的上下文</li>
+                            <li>设定输出格式</li>
+                            <li>分步骤引导</li>
+                        </ul>
+                        <div class="code-block">
+                            <pre><code>角色：你是一位专业的技术文档作者
+任务：编写一份关于Docker的入门教程
+要求：
+1. 使用简单易懂的语言
+2. 包含具体的代码示例
+3. 分为三个难度级别
+格式：Markdown</code></pre>
+                        </div>
+                    </section>
+
+                    <section id="context">
+                        <h3>3.2 上下文管理</h3>
+                        <p>有效管理对话上下文可以获得更连贯的回答：</p>
+                        <ul>
+                            <li>保持对话主题集中</li>
+                            <li>适时清理上下文</li>
+                            <li>使用标记分隔不同主题</li>
+                        </ul>
+                        <img src="../images/context-management.jpg" alt="上下文管理示例" class="article-image">
+                    </section>
+
+                    <section id="plugins">
+                        <h3>3.3 插件使用</h3>
+                        <p>ChatGPT插件可以显著扩展其功能：</p>
+                        <ul>
+                            <li>网页浏览插件</li>
+                            <li>代码解释器</li>
+                            <li>数据分析工具</li>
+                            <li>图像生成插件</li>
+                        </ul>
+                        <div class="tip-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>提示：部分插件可能需要ChatGPT Plus订阅。</p>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="examples">
+                    <h2>4. 实践案例</h2>
+                    <p>以下是一些常见的ChatGPT应用场景：</p>
+                    
+                    <div class="example-card">
+                        <h4>案例1：编程助手</h4>
+                        <p>使用ChatGPT进行代码审查、bug修复和算法优化：</p>
+                        <div class="code-block">
+                            <pre><code>请帮我优化这段代码的性能：
+for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+        // 一些操作
+    }
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>案例2：文章写作</h4>
+                        <p>利用ChatGPT辅助内容创作和编辑：</p>
+                        <ul>
+                            <li>大纲生成</li>
+                            <li>内容扩充</li>
+                            <li>语法检查</li>
+                            <li>风格优化</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>案例3：学习辅导</h4>
+                        <p>将ChatGPT作为个人导师：</p>
+                        <ul>
+                            <li>概念解释</li>
+                            <li>习题解答</li>
+                            <li>知识扩展</li>
+                            <li>学习计划制定</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="summary">
+                    <h2>5. 总结与展望</h2>
+                    <p>ChatGPT作为一个强大的AI助手，正在改变我们的工作和学习方式。通过本文介绍的使用技巧，你可以：</p>
+                    <ul>
+                        <li>提高工作效率</li>
+                        <li>获得更准确的回答</li>
+                        <li>探索更多可能性</li>
+                    </ul>
+                    
+                    <div class="future-outlook">
+                        <h4>未来展望</h4>
+                        <p>随着技术的发展，我们可以期待：</p>
+                        <ul>
+                            <li>更强大的多模态能力</li>
+                            <li>更深入的专业领域知识</li>
+                            <li>更个性化的交互体验</li>
+                            <li>更多创新的应用场景</li>
+                        </ul>
+                    </div>
+
+                    <div class="call-to-action">
+                        <p>开始你的AI之旅，让ChatGPT成为你的得力助手！</p>
+                        <a href="#" class="cta-button">立即开始使用 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </section>
+            </article>
+
+            <!-- 文章导航 -->
+            <div class="article-navigation">
+                <a href="#" class="prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>上一篇：AI发展史</span>
+                </a>
+                <a href="#" class="next">
+                    <span>下一篇：Midjourney教程</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- 相关文章 -->
+            <section class="related-articles">
+                <h3>相关文章</h3>
+                <div class="article-grid">
+                    <!-- 相关文章卡片将通过JS动态加载 -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我</a></li>
+                        <li><a href="tools.html">AI工具</a></li>
+                        <li><a href="contact.html">联系我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fab fa-weixin"></i> WeChat: ai_knowledge</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI知识库 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/articles-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/article-detail.js"></script>
+</body>
+</html> 
